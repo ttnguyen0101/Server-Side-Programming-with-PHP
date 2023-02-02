@@ -10,7 +10,7 @@
         </style>
     </head>
     <body>
-        <h2>Thu T Nguyen - IT 2600 - Lab 3</h2>
+        <h2>Thu T Nguyen - IT 2600 - Lab 3 using w3schools</h2>
         <?php
             //load the database it1150
             $dsn = 'mysql:host=localhost;dbname=it1150'; 

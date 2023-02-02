@@ -6,10 +6,10 @@
     </head>
     <body>
         <h2>Thu T Nguyen - IT 2600 - Lab 2</h2>
-        <form action="lab2-summary.php" method="get">
+        <form action="summary.php" method="get">
             <p>
                 Name<br>
-                <input type="input" id="name" name="name" placeholder="Name">
+                <input type="input" id="name" name="name" value=" $_GET['name'] ?>">
             </p>
             <p>
                 Major<br>
