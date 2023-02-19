@@ -9,7 +9,7 @@
         <form action="summary.php" method="get">
             <p>
                 Name<br>
-                <input type="input" id="name" name="name" value=" $_GET['name'] ?>">
+                <input type="input" id="name" name="name" value="<? echo $_GET['name'] ?>">
             </p>
             <p>
                 Major<br>
