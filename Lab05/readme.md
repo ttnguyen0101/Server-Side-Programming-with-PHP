@@ -1,1 +1,2 @@
 # Lab 5
+In this lab, I worked with form data and learned how to read input values from html form elements, then used those input for a simple investment calculation implementing conditions and loop statements. 
