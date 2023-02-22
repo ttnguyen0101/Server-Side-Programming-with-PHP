@@ -12,7 +12,7 @@
         $lastName = $_POST['last'];
         $middleInitial = substr($middle, 0, 1);
         
-        echo ($first . " " . $middleInitial . ". " . $lastName);
+        echo "Combined full name: " . ($first . " " . $middleInitial . ". " . $lastName);
         echo "<br>" . "---" . "<br>";
 
         //2.
@@ -30,7 +30,7 @@
 
         //4.
         $tolower = $_POST['tolower'];
-        echo (strtolower($tolower)); //convert string to lower case
+        echo "Convert to lower case: " . (strtolower($tolower)); //convert string to lower case
         echo "<br>" . "---" . "<br>";
 
         //5. 
@@ -54,7 +54,7 @@
 
         //8. Output value in currency format with 2 decimal place
         $currency = $_POST['currency'];
-        echo (sprintf('$%.02f', $currency));
+        echo "Currency format: " . (sprintf('$%.02f', $currency));
         echo "<br>" . "---" . "<br>";
 
         //9. 
@@ -71,11 +71,16 @@
 
         //10. Calculate hours from previous time to now
         $now = new DateTime();
-        $past = new DateTime(date("Y-m-d h:i:sa", $time));
-        $time_span = $past->diff($now);
-        echo $time_span->format('%R%dd %H:%I:%Sh');
+        echo "Current time: " . $now->format('Y-m-d H:i:s');
+        $past = new DateTime($year . $month . $day . $hour . $minute);
+        echo "<br> Past time: " . $past->format('Y-m-d H:i:s');
+        $time_difference = $past->diff($now);
+        echo "<br> Time difference: " . $time_difference->format('%R%Yy %mm %dd %H:%I:%S');
+        $hour_difference = round((new DateTime())->setTimeStamp(0)->add($time_difference)->getTimeStamp()/(60*60), 2); //convert seconds to hours
+        echo "<br> Difference in hours: " . $hour_difference;
         
-
         ?>
+        <br>
+        <input type=button value="Return to Form" onClick="document.location.href='http://localhost/lab/lab6/index.php'">
     </body>
 </html>
