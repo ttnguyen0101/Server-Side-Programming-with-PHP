@@ -1,0 +1,2 @@
+# Lab 8
+In this lab, I learned how to use functions and object-oriented concepts in PHP. I created a simple class with a constructor and its own methods. Then I used this class to create 2 book objects and calculated their price with tax. 
